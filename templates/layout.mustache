@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>#AcaSeDona</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="description" content="">
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:title" content="#AcaSeDona">
+    <meta property="og:description" content="Acá Se Dona es un mapa colaborativo que junta todos los puntos en donde se reciben donaciones en el mismo lugar. ¡Ayudemos a ayudar!">
+    <meta property="og:url" content="http://www.acasedona.com.ar/">
+    <meta property="fb:app_id" content="{{ fb_app_id }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ asset_share_fb }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@acasedona">
+    <meta name="twitter:creator" content="@acasedona">
+    <meta name="twitter:url" content="http://www.acasedona.com.ar/">
+    <meta name="twitter:title" content="#AcaSeDona">
+    <meta name="twitter:description" content="Acá Se Dona es un mapa colaborativo que junta todos los puntos en donde se reciben donaciones en el mismo lugar. ¡Ayudemos a ayudar!">
+    <meta name="twitter:image" content="{{ asset_share_tw }}">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="#AcaSeDona">
+    <meta itemprop="description" content="Acá Se Dona es un mapa colaborativo que junta todos los puntos en donde se reciben donaciones en el mismo lugar. ¡Ayudemos a ayudar!">
+    <meta itemprop="image" content="{{ asset_share_gp }}">
+
+    <link href="{{ asset_favicon }}" rel="shortcut icon">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="all" href="{{ asset_css }}">
+
+    <script>
+        var url_website = '{{ url_website }}';
+    </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ gm_api_key }}" type="text/javascript"></script>
+    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+    <script src="{{ asset_js_vendors }}"></script>
+    <script src="{{ asset_js }}"></script>
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4&appId={{ fb_app_id }}";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    {{{ header }}}
+
+    {{{ yield }}}
+
+    <footer>
+        <a href="https://twitter.com/AcaSeDona" target="_blank">@AcaSeDona</a>
+        <a href="https://twitter.com/celestineia" target="_blank">@celestineia</a>
+        <a href="https://twitter.com/martujohansen" target="_blank">@martujohansen</a>
+        <a href="https://twitter.com/alemohamad" target="_blank">@alemohamad</a>
+        <a href="https://twitter.com/rusosnith" target="_blank">@rusosnith</a>
+        <button class="btn btn-sm btn-primary show-info">¿Qué es #AcaSeDona?</button>
+    </footer>
+
+    {{{ analytics }}}
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+html, body {
+  font-family: $lato;
+  background: $greenBlue;
+}
+
+.container {
+  .alert_success {
+    padding: 10px;
+    background: $yellow;
+    color: $greenBlue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    border: 0px !important;
+  }
+  header {
+    .container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  .floating-about,
+  .floating-form {
+    &.active {
+      padding-top: 60px;
+    }
+    .content {
+      max-width: 700px;
+      width: auto;
+    }
+  }
+}
+
+.table {
+  margin-bottom: 5px;
+}
+.table>tbody>tr>td {
+  padding: 0;
+  line-height: 1;
+  border-top: 0px;
+}
+
+.floating-about,
+.floating-form {
+  position: absolute;
+  top: -2500px;
+  width: 100%;
+  z-index: 999;
+  background: $greenBlue;
+  padding: 20px;
+  transition: all .5s ease;
+  &.active {
+    top: 110px;
+  }
+  span {
+    &.text {
+      color: $red;
+      font-size: 22px;
+      font-weight: $latoBold;
+      margin-bottom: 20px;
+      display: block;
+    }
+  }
+  .content {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    max-height: 160px !important;
+    line-height: 40px !important;
+    padding: 10px 0;
+  }
+}
+
+footer {
+  line-height: 50px;
+  text-align: center;
+  max-height: 50px;
+  background: $marineBlue;
+  color: $yellow;
+  font-weight: $latoBold;
+  span {
+    font-size: 1.7em;
+  }
+  a {
+    display: inline-block;
+    padding: 0 5px;
+    color: $yellow;
+    text-decoration: none;
+    &:hover {
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+}
+
+.about {
+  max-width: 600px;
+  font-size: 12px;
+  margin: 30px auto 0;
+  padding: 20px;
+  border-radius: 5px;
+  background: $lightBlue;
+  line-height: 16px;
+  text-align: justify;
+  color: $marineBlue;
+  b {
+    display: block;
+    font-weight: $latoBold;
+    text-align: center;
+  }
+}
